@@ -1,0 +1,24 @@
+services:
+  postgres:
+    container_name: postgres-sql-fp
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: fresh_pick
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - 5432:5432
+    networks:
+      - spring_demo
+    restart: unless-stopped
+
+networks:
+  spring_demo:
+    driver: bridge
+
+volumes:
+  postgres:
+    driver: local

@@ -1,0 +1,13 @@
+#default profile
+spring:
+  profiles:
+    active: dev
+
+#api doc
+springdoc:
+  default-produces-media-type: application/json
+
+#api path
+server:
+  servlet:
+    context-path: /api/
