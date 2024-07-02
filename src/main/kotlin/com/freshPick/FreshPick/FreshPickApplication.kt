@@ -8,6 +8,5 @@ class FreshPickApplication
 
 fun main(args: Array<String>) {
 	runApplication<FreshPickApplication>(*args)
-//	init test
-//	second 2
+
 }
