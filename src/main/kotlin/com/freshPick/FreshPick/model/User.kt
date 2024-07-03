@@ -29,6 +29,10 @@ class User (
     @ManyToMany(fetch = FetchType.EAGER)
     var roles: List<Role>? = null,
 
+
+    @OneToMany(mappedBy = "user",  fetch = FetchType.LAZY)
+    var offers: List<Offer>? = null,
+
 //    TODO: acc locked and enabled
 
 
