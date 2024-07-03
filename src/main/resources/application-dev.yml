@@ -8,10 +8,20 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: validate
+#      TODO: change it to validate before migration
+      ddl-auto: update
     show-sql: false
     properties:
       hibernate:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+application:
+  security:
+    jwt:
+      secret-key: GzaFrNs9KTjB3xL1j8zn9GOnyNkMpmieBJu/7xh7eu+hySYV5rguhOSCB1AAPfOk
+      expiration: 8640000
+
