@@ -30,4 +30,5 @@ fun runner(roleRepository: RoleRepository): CommandLineRunner {
 
 fun main(args: Array<String>) {
 	runApplication<FreshPickApplication>(*args)
+
 }
